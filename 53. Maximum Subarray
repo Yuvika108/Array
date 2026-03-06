@@ -1,0 +1,31 @@
+# Intuition
+<!-- Describe your first thoughts on how to solve this problem. -->
+
+# Approach
+<!-- Describe your approach to solving the problem. -->
+
+# Complexity
+- Time complexity:
+<!-- Add your time complexity here, e.g. $$O(n)$$ -->
+
+- Space complexity:
+<!-- Add your space complexity here, e.g. $$O(n)$$ -->
+
+# Code
+```cpp []
+class Solution {
+public:
+    int maxSubArray(vector<int>& nums) {
+        int sum=0;
+        int maxVal=INT_MIN;
+
+        for(auto i: nums){
+            sum=sum+i;
+            maxVal=max(maxVal, sum);
+            if(sum<0) sum=0;
+        }
+        
+        return maxVal;
+    }
+};
+```
